@@ -402,9 +402,11 @@
   COVER.forEach(([c, c1, c2, dx]) => {
     const p = document.createElement('div'); p.className = 'tp';
     p.innerHTML = `<div class="bgp" style="--c1:${c1};--c2:${c2}"></div>`;
-    const img = new Image(); img.src = sprite(c, A.chars[c].def); img.alt = '';
-    // 상반신이 패널을 채우게 확대 (예린은 전신 그림이라 더 크게)
-    img.style.height = c === 'yerin' ? '2430px' : '1800px';
+    // 표지 전용 고해상도 상반신 (tools/build_cover.py). 게임 스프라이트를 키우면 흐릿해짐
+    const img = new Image(); img.src = `assets/cover_${c}.webp`; img.alt = '';
+    img.onerror = () => { img.onerror = null; img.src = sprite(c, A.chars[c].def); img.style.height = c === 'yerin' ? '2430px' : '1800px'; };
+    // 상반신이 패널을 채우게 확대 (예린은 전신 그림이라 더 크게) — 원래 스프라이트 높이 1800/2430 의 윗부분 62%/47%
+    img.style.height = c === 'yerin' ? (2430 * 0.47) + 'px' : (1800 * 0.62) + 'px';
     img.style.top = c === 'yerin' ? '60px' : '30px';
     img.style.marginLeft = dx + 'px';
     p.appendChild(img); tp.appendChild(p);
