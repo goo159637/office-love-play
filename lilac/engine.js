@@ -54,6 +54,8 @@
   const els = {};
   // 의상: 대본의 @옷 이 우선, 없으면 호감도 65%(13/20) 이상일 때 '호감 룩'(crush)
   const AFF_MAX = 20, CRUSH_AT = 13, ROUTE_MIN = 8;
+  // 호감도는 AFF_MAX 를 넘지 않음. 음수는 내부 계산(배드 엔딩 판정)에 쓰고 화면엔 0 으로 표시
+  function addAff(c, v) { st.aff[c] = Math.min(AFF_MAX, (st.aff[c] || 0) + v); }
   function outfitOf(c) {
     const a = A.chars[c], o = st?.outfit?.[c];
     if (o && a.outfits[o]) return o;
@@ -181,7 +183,7 @@
         if (performance.now() - shownAt < 400) return; // 연타로 잘못 고르는 것 방지
         inChoice = false; chBox.classList.remove('on');
         st.log.push({ who: '▶ 선택', text: fill(o.text), c: 'var(--accent)' });
-        for (const [c, v] of Object.entries(o.fx)) { st.aff[c] += v; if (v) toast(c, v); refreshOutfit(c); }
+        for (const [c, v] of Object.entries(o.fx)) { addAff(c, v); if (v) toast(c, v); refreshOutfit(c); }
         go(o.next);
       };
       chBox.appendChild(b);
@@ -229,7 +231,7 @@
         }
         case 'pick': st.pick = cmd.c; break;
         case 'flag': (st.flags = st.flags || {})[cmd.f] = true; break;
-        case 'aff': st.aff[cmd.c] = (st.aff[cmd.c] || 0) + cmd.v; if (cmd.v) toast(cmd.c, cmd.v); refreshOutfit(cmd.c); break;
+        case 'aff': addAff(cmd.c, cmd.v); if (cmd.v) toast(cmd.c, cmd.v); refreshOutfit(cmd.c); break;
         case 'iff': return go(st.flags?.[cmd.f] ? cmd.yes : cmd.no);
         case 'route': {
           // 루트 분기: 최고 호감도 캐릭터 (동점이면 회식 2차에서 고른 사람), 8 미만이면 배드 엔딩
@@ -281,7 +283,7 @@
   }
   function openAff(el) {
     el.innerHTML = Object.keys(CH).map(c => {
-      const v = st.aff[c], pct = Math.max(0, Math.min(100, v / AFF_MAX * 100));
+      const v = Math.max(0, st.aff[c]), pct = Math.max(0, Math.min(100, v / AFF_MAX * 100));
       return `<div class="aff"><b style="color:${CH[c].c}">${CH[c].n}</b><div class="barbg"><div class="fill" style="width:${pct}%;background:${CH[c].c}"></div></div><span>${v} / ${AFF_MAX}${v >= AFF_MAX ? ' <b style="font-size:.8em;color:#fff;background:' + CH[c].c + ';padding:2px 10px;border-radius:999px">MAX</b>' : ''}</span></div>`;
     }).join('') + `<div class="affmax">호감도 MAX = ${AFF_MAX} · ${CRUSH_AT} 이상이면 룩이 바뀌고, ${AFF_MAX}(MAX)로 고백하면 특별한 장면이 있어요</div>`;
     if (el.id === 'affList') open('#m-aff');
