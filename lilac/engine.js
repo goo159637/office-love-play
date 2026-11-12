@@ -174,6 +174,7 @@
   const chBox = $('#choices');
   function choose(cmd) {
     inChoice = true; stopModes(); const shownAt = performance.now();
+    box.classList.add('choosing');   // 선택지 동안 대사창 글자는 숨기고 바탕만
     chBox.innerHTML = '';
     cmd.opts.forEach(o => {
       const b = document.createElement('button');
@@ -181,7 +182,7 @@
       b.onclick = (ev) => {
         ev.stopPropagation();
         if (performance.now() - shownAt < 400) return; // 연타로 잘못 고르는 것 방지
-        inChoice = false; chBox.classList.remove('on');
+        inChoice = false; chBox.classList.remove('on'); box.classList.remove('choosing');
         st.log.push({ who: '▶ 선택', text: fill(o.text), c: 'var(--accent)' });
         for (const [c, v] of Object.entries(o.fx)) { addAff(c, v); if (v) toast(c, v); refreshOutfit(c); }
         go(o.next);
@@ -326,7 +327,7 @@
   function resetStage() {
     stopModes(); clearInterval(typing?.t); typing = null; waiting = false; inChoice = false;
     bgLayer.innerHTML = ''; charLayer.innerHTML = ''; for (const k in els) delete els[k];
-    cg.classList.remove('on'); chBox.classList.remove('on'); box.classList.add('hide');
+    cg.classList.remove('on'); chBox.classList.remove('on'); box.classList.remove('choosing'); box.classList.add('hide');
   }
   function toTitle() {
     resetStage(); bar.style.display = 'none';
