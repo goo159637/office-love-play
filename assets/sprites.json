@@ -1,0 +1,478 @@
+{
+"harin_laugh": [
+711,
+1500
+],
+"harin_normal": [
+711,
+1500
+],
+"harin_pout": [
+711,
+1500
+],
+"harin_sad": [
+711,
+1500
+],
+"harin_shy": [
+711,
+1500
+],
+"harin_smile": [
+711,
+1500
+],
+"harin_surprised": [
+711,
+1500
+],
+"jia_angry": [
+766,
+1500
+],
+"jia_normal": [
+766,
+1500
+],
+"jia_shy": [
+766,
+1500
+],
+"jia_smile": [
+766,
+1500
+],
+"jia_surprised": [
+766,
+1500
+],
+"sori_laugh": [
+622,
+1500
+],
+"sori_sad": [
+622,
+1500
+],
+"sori_shy": [
+622,
+1500
+],
+"sori_smile": [
+622,
+1500
+],
+"sori_surprised": [
+622,
+1500
+],
+"yerin_angry": [
+547,
+1500
+],
+"yerin_laugh": [
+547,
+1500
+],
+"yerin_pout": [
+547,
+1500
+],
+"yerin_shy": [
+547,
+1500
+],
+"yerin_smile": [
+547,
+1500
+],
+"yerin_surprised": [
+547,
+1500
+],
+"yujin_normal": [
+622,
+1500
+],
+"yujin_shy": [
+622,
+1500
+],
+"yujin_smile": [
+622,
+1500
+],
+"yujin_surprised": [
+622,
+1500
+],
+"harin-casual_laugh": [
+716,
+1500
+],
+"harin-casual_normal": [
+716,
+1500
+],
+"harin-casual_pout": [
+716,
+1500
+],
+"harin-casual_sad": [
+716,
+1500
+],
+"harin-casual_shy": [
+716,
+1500
+],
+"harin-casual_smile": [
+716,
+1500
+],
+"harin-casual_surprised": [
+716,
+1500
+],
+"harin-crush_laugh": [
+694,
+1500
+],
+"harin-crush_normal": [
+694,
+1500
+],
+"harin-crush_pout": [
+694,
+1500
+],
+"harin-crush_sad": [
+694,
+1500
+],
+"harin-crush_shy": [
+694,
+1500
+],
+"harin-crush_smile": [
+694,
+1500
+],
+"harin-crush_surprised": [
+694,
+1500
+],
+"jia-casual_angry": [
+795,
+1500
+],
+"jia-casual_normal": [
+795,
+1500
+],
+"jia-casual_shy": [
+795,
+1500
+],
+"jia-casual_smile": [
+795,
+1500
+],
+"jia-casual_surprised": [
+795,
+1500
+],
+"jia-crush_angry": [
+721,
+1500
+],
+"jia-crush_normal": [
+721,
+1500
+],
+"jia-crush_shy": [
+721,
+1500
+],
+"jia-crush_smile": [
+721,
+1500
+],
+"jia-crush_surprised": [
+721,
+1500
+],
+"sori-casual_laugh": [
+706,
+1500
+],
+"sori-casual_sad": [
+706,
+1500
+],
+"sori-casual_shy": [
+706,
+1500
+],
+"sori-casual_smile": [
+706,
+1500
+],
+"sori-casual_surprised": [
+706,
+1500
+],
+"sori-crush_laugh": [
+626,
+1500
+],
+"sori-crush_sad": [
+626,
+1500
+],
+"sori-crush_shy": [
+626,
+1500
+],
+"sori-crush_smile": [
+626,
+1500
+],
+"sori-crush_surprised": [
+626,
+1500
+],
+"yerin-casual_angry": [
+532,
+1500
+],
+"yerin-casual_laugh": [
+532,
+1500
+],
+"yerin-casual_pout": [
+532,
+1500
+],
+"yerin-casual_shy": [
+532,
+1500
+],
+"yerin-casual_smile": [
+532,
+1500
+],
+"yerin-casual_surprised": [
+532,
+1500
+],
+"yerin-crush_angry": [
+548,
+1500
+],
+"yerin-crush_laugh": [
+548,
+1500
+],
+"yerin-crush_pout": [
+548,
+1500
+],
+"yerin-crush_shy": [
+548,
+1500
+],
+"yerin-crush_smile": [
+548,
+1500
+],
+"yerin-crush_surprised": [
+548,
+1500
+],
+"yujin-casual_normal": [
+795,
+1500
+],
+"yujin-casual_shy": [
+795,
+1500
+],
+"yujin-casual_smile": [
+795,
+1500
+],
+"yujin-casual_surprised": [
+795,
+1500
+],
+"yujin-crush_normal": [
+615,
+1500
+],
+"yujin-crush_shy": [
+615,
+1500
+],
+"yujin-crush_smile": [
+615,
+1500
+],
+"yujin-crush_surprised": [
+615,
+1500
+],
+"chaewon-casual_angry": [
+829,
+1500
+],
+"chaewon-casual_laugh": [
+829,
+1500
+],
+"chaewon-casual_normal": [
+829,
+1500
+],
+"chaewon-casual_pout": [
+829,
+1500
+],
+"chaewon-casual_sad": [
+829,
+1500
+],
+"chaewon-casual_shy": [
+829,
+1500
+],
+"chaewon-casual_smile": [
+829,
+1500
+],
+"chaewon-casual_surprised": [
+829,
+1500
+],
+"chaewon-crush_angry": [
+752,
+1500
+],
+"chaewon-crush_laugh": [
+752,
+1500
+],
+"chaewon-crush_normal": [
+752,
+1500
+],
+"chaewon-crush_pout": [
+752,
+1500
+],
+"chaewon-crush_sad": [
+752,
+1500
+],
+"chaewon-crush_shy": [
+752,
+1500
+],
+"chaewon-crush_smile": [
+752,
+1500
+],
+"chaewon-crush_surprised": [
+752,
+1500
+],
+"chaewon_angry": [
+749,
+1500
+],
+"chaewon_laugh": [
+749,
+1500
+],
+"chaewon_normal": [
+749,
+1500
+],
+"chaewon_pout": [
+749,
+1500
+],
+"chaewon_sad": [
+749,
+1500
+],
+"chaewon_shy": [
+749,
+1500
+],
+"chaewon_smile": [
+749,
+1500
+],
+"chaewon_surprised": [
+749,
+1500
+],
+"chaewon-ending_shy": [
+902,
+1500
+],
+"chaewon-ending_smile": [
+902,
+1500
+],
+"harin-ending_laugh": [
+696,
+1500
+],
+"harin-ending_shy": [
+696,
+1500
+],
+"harin-ending_smile": [
+696,
+1500
+],
+"jia-ending_shy": [
+763,
+1500
+],
+"jia-ending_smile": [
+763,
+1500
+],
+"sori-ending_shy": [
+641,
+1500
+],
+"sori-ending_smile": [
+641,
+1500
+],
+"yerin-ending_laugh": [
+545,
+1500
+],
+"yerin-ending_shy": [
+545,
+1500
+],
+"yerin-ending_smile": [
+545,
+1500
+],
+"yujin-ending_shy": [
+670,
+1500
+],
+"yujin-ending_smile": [
+670,
+1500
+]
+}
